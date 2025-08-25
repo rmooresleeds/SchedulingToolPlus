@@ -1,12 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PanoptoScheduleUploader.Core;
-using System.IO;
-
-namespace PanoptoScheduleUploader.Test
+﻿namespace PanoptoScheduleUploader.Test
 {
     [TestClass]
     public class WhenXmlUploaded
