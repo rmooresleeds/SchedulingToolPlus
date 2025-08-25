@@ -16,7 +16,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x' # or your required version
-    - name: Restore dependencies
-      run: dotnet restore PanoptoScheduleUploader.sln
+    - name: Restore NuGet packages
+      run: nuget restore PanoptoScheduleUploader.sln
     - name: Build
       run: dotnet build PanoptoScheduleUploader.sln --configuration Release --no-restore
