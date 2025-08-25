@@ -122,6 +122,14 @@ namespace PanoptoScheduleUploader.Core
                                     {
                                         sessionManager.UpdateSessionDescription(result.SessionId, recording.Presenter);
                                     }
+
+                                    // Update session availability start settings
+                                    sessionManager.sessionManager.UpdateSessionsAvailabilityStartSettings(
+                                        sessionManager.authentication,
+                                        new Guid[] { result.SessionId },
+                                        PanoptoScheduleUploader.Services.SessionManagement.SessionStartSettingType.AvailabilityStart,
+                                        recording.AvailabilityStartDateTime
+                                    );
                                 }
                                 if (result.Success == false)
                                 {

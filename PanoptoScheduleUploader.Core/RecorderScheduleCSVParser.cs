@@ -21,6 +21,7 @@ namespace PanoptoScheduleUploader.Core
         private int presenterIndex = 5;
         private int folderIndex = 6;
         private int webcast = 7;
+        private int availabilityStartDateTime = 8;
 
         /// <summary>
         /// Initializes a new instance of the RecorderScheduleCSVParser class.
@@ -83,6 +84,9 @@ namespace PanoptoScheduleUploader.Core
                     {
                         bool.TryParse(elements[webcast], out b);
                     }
+
+                    var availabilityStartDateTime = DateTime.Parse(elements[availabilityStartDateTime]);
+
                     recorderSchedules.Add(new Recording
                     {
                         Title = elements[titleIndex],
@@ -93,7 +97,8 @@ namespace PanoptoScheduleUploader.Core
                         EndTime = endTime,
                         Presenter = elements[presenterIndex],
                         CourseTitle = elements[folderIndex],
-                        RecordingDate = elements[dateIndex]
+                        RecordingDate = elements[dateIndex],
+                        AvailabilityStartDateTime = availabilityStartDateTime
                     });
                 }
             }
