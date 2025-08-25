@@ -85,7 +85,7 @@ namespace PanoptoScheduleUploader.Core
                         bool.TryParse(elements[webcast], out b);
                     }
 
-                    var availabilityStartDateTime = DateTime.Parse(elements[availabilityStartDateTime]);
+                    var availabilityStart = DateTime.Parse(elements[availabilityStartDateTime]);
 
                     recorderSchedules.Add(new Recording
                     {
@@ -98,7 +98,7 @@ namespace PanoptoScheduleUploader.Core
                         Presenter = elements[presenterIndex],
                         CourseTitle = elements[folderIndex],
                         RecordingDate = elements[dateIndex],
-                        AvailabilityStartDateTime = availabilityStartDateTime
+                        AvailabilityStartDateTime = availabilityStart
                     });
                 }
             }
