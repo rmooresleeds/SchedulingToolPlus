@@ -19,10 +19,6 @@ namespace PanoptoScheduleUploader.Services
         {
             get { return authentication; }
         }
-        private const int RESULTS_PER_PAGE = 250; // Max is 10,000
-        public SessionManagementClient sessionManager;
-        AuthenticationInfo authentication;
-
         private Dictionary<string, Folder> folderByNameCache;
         
         private Dictionary<Guid, Folder> folderByIdCache;
