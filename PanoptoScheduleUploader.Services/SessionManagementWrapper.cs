@@ -13,7 +13,7 @@ namespace PanoptoScheduleUploader.Services
     {
         private const int RESULTS_PER_PAGE = 250; // Max is 10,000
         public SessionManagementClient sessionManager;
-        AuthenticationInfo authentication;
+        public AuthenticationInfo authentication;
 
         public AuthenticationInfo Authentication
         {
