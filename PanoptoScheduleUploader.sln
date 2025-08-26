@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoptoScheduleUploader.Core", "PanoptoScheduleUploader.Core\PanoptoScheduleUploader.Core.csproj", "{C15719C1-E5A2-41FC-9566-E15C173ED145}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanoptoScheduleUploader.Test", "PanoptoScheduleUploader.Test\PanoptoScheduleUploader.Test.csproj", "{0BEEFEAB-417A-45E4-8D74-54A8289C2375}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{907989F2-07E5-461B-8B7A-DB84D8D55039}"
 	ProjectSection(SolutionItems) = preProject
 		Local.testsettings = Local.testsettings
