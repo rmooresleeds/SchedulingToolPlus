@@ -22,7 +22,7 @@ jobs:
     - name: Build with MSBuild
       run: msbuild PanoptoScheduleUploader.sln /p:Configuration=Release /p:Platform="x86"
     - name: Upload Release Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: PanoptoScheduleUploader-Release
         path: |
