@@ -35,10 +35,12 @@ jobs:
       with:
         tag_name: Plus.v1.0.0
         name: "Plus Release v1.0.0"
+        draft: false
+        prerelease: false
         files: |
-          PanoptoScheduleUploader.UI/bin/Release/*.exe
-          PanoptoScheduleUploader.UI/bin/Release/*.dll
-          PanoptoScheduleUploader.Core/bin/Release/*.dll
-          PanoptoScheduleUploader.Services/bin/Release/*.dll
+          PanoptoScheduleUploader.UI/bin/Release/**
+          PanoptoScheduleUploader.Core/bin/Release/**
+          PanoptoScheduleUploader.Services/bin/Release/**
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
