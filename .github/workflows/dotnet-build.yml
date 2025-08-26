@@ -21,3 +21,23 @@ jobs:
     - uses: microsoft/setup-msbuild@v1.3
     - name: Build with MSBuild
       run: msbuild PanoptoScheduleUploader.sln /p:Configuration=Release /p:Platform="x86"
+    - name: Upload Release Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: PanoptoScheduleUploader-Release
+        path: |
+          PanoptoScheduleUploader.UI/bin/Release/
+          PanoptoScheduleUploader.Core/bin/Release/
+          PanoptoScheduleUploader.Services/bin/Release/
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: Plus.v1.0.0
+        name: "Plus Release v1.0.0"
+        files: |
+          PanoptoScheduleUploader.UI/bin/Release/**
+          PanoptoScheduleUploader.Core/bin/Release/**
+          PanoptoScheduleUploader.Services/bin/Release/**
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
