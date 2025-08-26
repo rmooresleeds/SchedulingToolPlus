@@ -18,5 +18,6 @@ jobs:
         dotnet-version: '8.0.x' # or your required version
     - name: Restore NuGet packages
       run: nuget restore PanoptoScheduleUploader.sln
+    - uses: microsoft/setup-msbuild@v1.3
     - name: Build with MSBuild
       run: msbuild PanoptoScheduleUploader.sln /p:Configuration=Release /p:Platform="x86"
