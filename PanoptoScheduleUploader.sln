@@ -24,6 +24,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
+		Release|x86.ActiveCfg = Release|x86
+		Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C15719C1-E5A2-41FC-9566-E15C173ED145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
