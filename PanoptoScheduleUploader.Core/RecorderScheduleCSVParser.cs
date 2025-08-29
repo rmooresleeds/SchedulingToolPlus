@@ -98,7 +98,7 @@ namespace PanoptoScheduleUploader.Core
                         Presenter = elements[presenterIndex],
                         CourseTitle = elements[folderIndex],
                         RecordingDate = elements[dateIndex],
-                        availabilityStartDateTime = availabilityStart
+                        Availability = availabilityStart
                     });
                 }
             }
