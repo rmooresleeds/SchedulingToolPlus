@@ -128,7 +128,7 @@ namespace PanoptoScheduleUploader.Core
                                         sessionManager.authentication,
                                         new Guid[] { result.SessionId },
                                         PanoptoScheduleUploader.Services.SessionManagement.SessionStartSettingType.SpecificDate,
-                                        recording.AvailabilityStartDateTime
+                                        recording.Availability
                                     );
                                 }
                                 if (result.Success == false)
