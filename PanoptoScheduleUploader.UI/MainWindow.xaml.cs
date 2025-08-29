@@ -36,7 +36,7 @@ namespace PanoptoScheduleUploader.UI
         private const string PRESENTER = "Presenter";
         private const string FOLDER = "Folder";
         private const string ISWEBCAST = "IsWebcast";
-        private const string AVAILABILITY = "Availability Start DateTime";
+        private const string AVAILABILITY = "Availability";
 
         private IEnumerable<Services.SchedulingResult> results = null;
         private Dictionary<Services.SessionManagement.Session, SessionUsage> sessions = null;
@@ -85,6 +85,7 @@ namespace PanoptoScheduleUploader.UI
                 previewGrid.Columns[4].Width = 150;
                 previewGrid.Columns[5].Width = 142;
                 previewGrid.Columns[5].Width = 70;
+                previewGrid.Columns[6].Width = 100;
             }
         }
 
@@ -129,7 +130,7 @@ namespace PanoptoScheduleUploader.UI
                     row[FOLDER] = recording.CourseTitle;
                     row[RECORDING_DATE] = recording.RecordingDate;
                     row[ISWEBCAST] = recording.IsBroadCast.ToString();
-                    row[AVAILABILITY] = recording.AvailabilityStartDateTime.ToString();
+                    row[AVAILABILITY] = recording.Availability.ToString();
                     table.Rows.Add(row);
                 }
             }
