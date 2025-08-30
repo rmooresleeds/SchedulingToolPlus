@@ -85,8 +85,7 @@ Global
 		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Release|x86.ActiveCfg = Release|Any CPU
 		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Release|x86.ActiveCfg = Release|x86
 		{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}.Release|x86.Build.0 = Release|x86
-
-	EndGlobalSection
+	EndGlobalSection 
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
