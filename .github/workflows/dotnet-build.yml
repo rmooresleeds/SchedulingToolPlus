@@ -21,15 +21,16 @@ jobs:
     - uses: microsoft/setup-msbuild@v1.3
     - name: Build with MSBuild
       run: msbuild PanoptoScheduleUploader.sln /p:Configuration=Release /p:Platform="x86"
-    - name: Upload Release Artifacts
+    - name: Publish self-contained UI app
+      run: dotnet publish PanoptoScheduleUploader.UI/PanoptoScheduleUploader.UI.csproj -c Release -r win-x86 --self-contained -o published/PanoptoScheduleUploader.UI
+    - name: Upload Published Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: PanoptoScheduleUploader-Release
         path: |
-          PanoptoScheduleUploader.UI/bin/Release/
+          published/PanoptoScheduleUploader.UI/
           PanoptoScheduleUploader.Core/bin/Release/
           PanoptoScheduleUploader.Services/bin/Release/
-
     - name: Create GitHub Release
       uses: softprops/action-gh-release@v1
       with:
@@ -38,7 +39,7 @@ jobs:
         draft: false
         prerelease: false
         files: |
-          PanoptoScheduleUploader.UI/bin/Release/**
+          published/PanoptoScheduleUploader.UI/**
           PanoptoScheduleUploader.Core/bin/Release/**
           PanoptoScheduleUploader.Services/bin/Release/**
       env:
