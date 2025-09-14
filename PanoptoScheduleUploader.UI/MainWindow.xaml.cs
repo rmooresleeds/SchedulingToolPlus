@@ -85,7 +85,6 @@ namespace PanoptoScheduleUploader.UI
                 previewGrid.Columns[4].Width = 150;
                 previewGrid.Columns[5].Width = 142;
                 previewGrid.Columns[5].Width = 70;
-                previewGrid.Columns[6].Width = 100;
             }
         }
 
