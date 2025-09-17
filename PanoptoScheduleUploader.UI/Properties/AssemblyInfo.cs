@@ -8,13 +8,13 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Panopto Schedule Uploader")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyDescription("Uploader for Panopto recording schedules")]
+[assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("Aiimi")]
 [assembly: AssemblyProduct("Panopto Schedule Uploader")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyCopyright("Copyright © Ambiently 2013-2025")]
+[assembly: AssemblyTrademark("Ambiently")]
+[assembly: AssemblyCulture("en-GB")]
 [assembly: log4net.Config.XmlConfigurator]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
