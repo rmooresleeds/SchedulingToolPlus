@@ -14,7 +14,7 @@ using System.Windows;
 [assembly: AssemblyProduct("Panopto Schedule Uploader")]
 [assembly: AssemblyCopyright("Copyright © Ambiently 2013-2025")]
 [assembly: AssemblyTrademark("Ambiently")]
-[assembly: AssemblyCulture("en-GB")]
+[assembly: AssemblyCulture("")]
 [assembly: log4net.Config.XmlConfigurator]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
