@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ede0490e-2f81-47e2-a327-49c1ed8777d9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://demo.hosted.panopto.com/Panopto/publicapi/4.2/usageReporting.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UsageReporting1.wsdl" MetadataType="Wsdl" ID="0d1f652c-cfef-48af-b0f9-47780c27bb4c" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?wsdl" />
+    <MetadataFile FileName="UsageReporting3.xsd" MetadataType="Schema" ID="93680f85-dec7-461c-a90e-c0c779a6e64f" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?xsd=xsd2" />
+    <MetadataFile FileName="UsageReporting31.xsd" MetadataType="Schema" ID="82745b8d-e3c1-4825-be50-7aae6290249f" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?xsd=xsd1" />
+    <MetadataFile FileName="UsageReporting32.xsd" MetadataType="Schema" ID="10435f87-ba8c-4aa4-8819-bd4ef6095cf7" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?xsd=xsd0" />
+    <MetadataFile FileName="UsageReporting1.disco" MetadataType="Disco" ID="dd7bc363-ce59-40d3-a660-992ae7e7b77a" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?disco" />
+    <MetadataFile FileName="UsageReporting33.xsd" MetadataType="Schema" ID="ee3990b2-b0c9-4bcc-8924-9d73741f5642" SourceId="1" SourceUrl="http://demo.hosted.panopto.com/Panopto/PublicAPI/4.2/UsageReporting.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
