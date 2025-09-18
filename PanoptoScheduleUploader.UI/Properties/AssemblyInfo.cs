@@ -7,7 +7,7 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Panopto Schedule Uploader")]
+[assembly: AssemblyTitle("Panopto Schedule Uploader - Enhanced")]
 [assembly: AssemblyDescription("Uploader for Panopto recording schedules")]
 [assembly: AssemblyConfiguration("Release")]
 [assembly: AssemblyCompany("Aiimi")]
