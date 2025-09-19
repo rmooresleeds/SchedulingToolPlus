@@ -9,8 +9,13 @@ on:
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
+    - name: Clean output directories
+      run: |
+        if (Test-Path "PanoptoScheduleUploader.UI/bin/Release") { Remove-Item "PanoptoScheduleUploader.UI/bin/Release" -Recurse -Force }
+        if (Test-Path "PanoptoScheduleUploader.Core/bin/Release") { Remove-Item "PanoptoScheduleUploader.Core/bin/Release" -Recurse -Force }
+        if (Test-Path "PanoptoScheduleUploader.Services/bin/Release") { Remove-Item "PanoptoScheduleUploader.Services/bin/Release" -Recurse -Force }
+      shell: pwsh      
     - uses: actions/checkout@v3
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.3
@@ -18,12 +23,7 @@ jobs:
       uses: nuget/setup-nuget@v1
     - name: Restore NuGet packages
       run: nuget restore PanoptoScheduleUploader.sln
-    - name: Clean output directories
-      run: |
-       if (Test-Path "PanoptoScheduleUploader.UI/bin/Release") { Remove-Item "PanoptoScheduleUploader.UI/bin/Release" -Recurse -Force }
-       if (Test-Path "PanoptoScheduleUploader.Core/bin/Release") { Remove-Item "PanoptoScheduleUploader.Core/bin/Release" -Recurse -Force }
-       if (Test-Path "PanoptoScheduleUploader.Services/bin/Release") { Remove-Item "PanoptoScheduleUploader.Services/bin/Release" -Recurse -Force }
-      shell: pwsh
+
     - name: Build with MSBuild
       run: msbuild PanoptoScheduleUploader.sln /p:Configuration=Release /p:Platform="x86"
     - name: Upload Release Artifacts
@@ -44,4 +44,3 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        
