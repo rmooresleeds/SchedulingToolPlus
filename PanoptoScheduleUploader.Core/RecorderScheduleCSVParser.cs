@@ -22,6 +22,7 @@ namespace PanoptoScheduleUploader.Core
         private int folderIndex = 6;
         private int webcast = 7;
         private int availabilityIndex = 8;
+        private int OwnerIndex = 9;
 
         /// <summary>
         /// Initializes a new instance of the RecorderScheduleCSVParser class.
@@ -97,7 +98,8 @@ namespace PanoptoScheduleUploader.Core
                         Presenter = elements[presenterIndex],
                         CourseTitle = elements[folderIndex],
                         RecordingDate = elements[dateIndex],
-                        Availability = availabilityStart
+                        Availability = availabilityStart,
+                        Owner = elements[OwnerIndex]
                     });
                 }
             }

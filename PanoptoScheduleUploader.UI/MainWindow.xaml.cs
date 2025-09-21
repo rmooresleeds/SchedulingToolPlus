@@ -33,11 +33,12 @@ namespace PanoptoScheduleUploader.UI
         private const string RECORDING_DATE = "Recording Date";
         private const string START_TIME = "Start Time";
         private const string END_TIME = "End Time";
-        private const string PRESENTER = "Presenter";
+        private const string PRESENTER = "Description";
         private const string FOLDER = "Folder";
-        private const string ISWEBCAST = "IsWebcast";
+        private const string ISWEBCAST = "Webcast";
         private const string AVAILABILITY = "Availability";
-
+        private const string OWNER = "Owner";
+        private const string RECORDERNAME = "Recorder";
         private IEnumerable<Services.SchedulingResult> results = null;
         private Dictionary<Services.SessionManagement.Session, SessionUsage> sessions = null;
 
@@ -78,12 +79,12 @@ namespace PanoptoScheduleUploader.UI
                 }
 
                 //Set the column widths to make it look prettier 
-                previewGrid.Columns[0].Width = 100;
+                previewGrid.Columns[0].Width = 50;
                 previewGrid.Columns[1].Width = 200;
-                previewGrid.Columns[2].Width = 100;
-                previewGrid.Columns[3].Width = 100;
-                previewGrid.Columns[4].Width = 150;
-                previewGrid.Columns[5].Width = 142;
+                previewGrid.Columns[2].Width = 80;
+                previewGrid.Columns[3].Width = 50;
+                previewGrid.Columns[4].Width = 50;
+                previewGrid.Columns[5].Width = 100;
                 previewGrid.Columns[5].Width = 70;
             }
         }
@@ -103,6 +104,8 @@ namespace PanoptoScheduleUploader.UI
                 table.Columns.Add(FOLDER);
                 table.Columns.Add(ISWEBCAST);
                 table.Columns.Add(AVAILABILITY);
+                table.Columns.Add(OWNER);
+                table.Columns.Add(RECORDERNAME);
 
                 IEnumerable<Recording> recordings = null;
                 if (System.IO.Path.GetExtension(fileName) == ".xml")
@@ -130,6 +133,8 @@ namespace PanoptoScheduleUploader.UI
                     row[RECORDING_DATE] = recording.RecordingDate;
                     row[ISWEBCAST] = recording.IsBroadCast.ToString();
                     row[AVAILABILITY] = recording.Availability.ToString();
+                    row[OWNER] = recording.Owner;
+                    row[RECORDERNAME] = recording.RecorderName;
                     table.Rows.Add(row);
                 }
             }
