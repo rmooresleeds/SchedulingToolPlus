@@ -1,4 +1,4 @@
-Scheduling Tool Plus
+Scheduling Tool Plus v.1.5
 =====================
 
 Scheduling Tool Plus
