@@ -38,6 +38,7 @@ namespace PanoptoScheduleUploader.UI
         private const string ISWEBCAST = "Webcast";
         private const string AVAILABILITY = "Availability";
         private const string OWNER = "Owner";
+        private const string RECORDERNAME = "Recorder";
         private IEnumerable<Services.SchedulingResult> results = null;
         private Dictionary<Services.SessionManagement.Session, SessionUsage> sessions = null;
 
@@ -104,6 +105,7 @@ namespace PanoptoScheduleUploader.UI
                 table.Columns.Add(ISWEBCAST);
                 table.Columns.Add(AVAILABILITY);
                 table.Columns.Add(OWNER);
+                table.Columns.Add(RECORDERNAME);
 
                 IEnumerable<Recording> recordings = null;
                 if (System.IO.Path.GetExtension(fileName) == ".xml")
@@ -132,6 +134,7 @@ namespace PanoptoScheduleUploader.UI
                     row[ISWEBCAST] = recording.IsBroadCast.ToString();
                     row[AVAILABILITY] = recording.Availability.ToString();
                     row[OWNER] = recording.Owner;
+                    row[RECORDERNAME] = recording.RecorderName;
                     table.Rows.Add(row);
                 }
             }
