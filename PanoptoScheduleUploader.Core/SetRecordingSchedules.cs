@@ -130,6 +130,13 @@ namespace PanoptoScheduleUploader.Core
                                         PanoptoScheduleUploader.Services.SessionManagement.SessionStartSettingType.SpecificDate,
                                         recording.Availability
                                     );
+                                        
+                                     // Update session owner settings
+                                    sessionManager.sessionManager.UpdateSessionOwner(
+                                        sessionManager.authentication,
+                                        new Guid[] { result.SessionId },
+                                        "unified\rmoores"                                       
+                                    );
                                 }
                                 if (result.Success == false)
                                 {
