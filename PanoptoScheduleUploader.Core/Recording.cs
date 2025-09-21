@@ -17,5 +17,6 @@ namespace PanoptoScheduleUploader.Core
         public string CourseTitle { get; set; }
         public string RecordingDate { get; set; }
         public DateTime Availability { get; set; }
+        public string Owner { get; set; }
     }
 }
