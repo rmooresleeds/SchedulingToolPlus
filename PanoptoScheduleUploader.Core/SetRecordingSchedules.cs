@@ -135,7 +135,7 @@ namespace PanoptoScheduleUploader.Core
                                     sessionManager.sessionManager.UpdateSessionOwner(
                                         sessionManager.authentication,
                                         new Guid[] { result.SessionId },
-                                        "unified\dlsrmo" //recording.Owner                                      
+                                        "unified\\dlsrmo"                                       
                                     );
                                 }
                                 if (result.Success == false)
